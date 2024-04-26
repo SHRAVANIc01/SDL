@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <script>
+        // JavaScript function to change text color
+        function changeColor() {
+            document.getElementById("text").style.color = "red";
+        }
+
+        // JavaScript function to display an alert message
+        function showAlert() {
+            alert("Button clicked!");
+        }
+
+        // JavaScript function to toggle text visibility
+        function toggleTextVisibility() {
+            var textElement = document.getElementById("text");
+            textElement.style.display = (textElement.style.display === "none") ? "block" : "none";
+        }
+
+        // JavaScript function to change text content
+        function changeTextContent() {
+            document.getElementById("text").textContent = "Text content changed!";
+        }
+
+        // JavaScript function to increase font size
+        function increaseFontSize() {
+            var textElement = document.getElementById("text");
+            var currentSize = parseFloat(window.getComputedStyle(textElement, null).getPropertyValue('font-size'));
+            textElement.style.fontSize = (currentSize + 2) + 'px';
+        }
+
+        // JavaScript function to decrease font size
+        function decreaseFontSize() {
+            var textElement = document.getElementById("text");
+            var currentSize = parseFloat(window.getComputedStyle(textElement, null).getPropertyValue('font-size'));
+            textElement.style.fontSize = (currentSize - 2) + 'px';
+        }
+
+        // JavaScript function to reset font size
+        function resetFontSize() {
+            document.getElementById("text").style.fontSize = "16px";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Event Handlers</h1>
+    <button onclick="changeColor()">Change Text Color</button>
+    <p id="text">This is a sample text.</p>
+    <button onclick="showAlert()">Click Me</button>
+    <button onclick="toggleTextVisibility()">Toggle Text Visibility</button>
+    <button onclick="changeTextContent()">Change Text Content</button>
+    <button onclick="increaseFontSize()">Increase Font Size</button>
+    <button onclick="decreaseFontSize()">Decrease Font Size</button>
+    <button onclick="resetFontSize()">Reset Font Size</button>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    /* Light grey background color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    /* Dark grey text color for labels */
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1877f2;
+    /* Blue background color for button */
+    color: #fff;
+    /* White text color for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1659a4;
+    /* Darker blue color on hover */
+}
+
+.error {
+    color: red;
+    /* Red color for error messages */
+    font-size: 14px;
+}

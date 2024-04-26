@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table th {
+    font-size: 18px;
+}
+
+.table td {
+    font-size: 16px;
+}
+
+.table-bordered {
+    border: 2px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 2px solid #dee2e6;
+}

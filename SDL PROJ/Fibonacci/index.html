@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        #fibonacciSeries {
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .fibonacci-number {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: #ffcc00;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fibonacci Series</h1>
+    <label for="length">Enter the length of Fibonacci series:</label>
+    <input type="number" id="length" min="1" value="10">
+    <button onclick="generateFibonacciSeries()">Generate Series</button>
+    <div id="fibonacciSeries"></div>
+
+    <script>
+        // Function to generate Fibonacci series
+        function generateFibonacciSeries() {
+            var fibonacciSeriesElement = document.getElementById('fibonacciSeries');
+            fibonacciSeriesElement.innerHTML = '';
+
+            var limit = parseInt(document.getElementById('length').value);
+            var fibonacciSeries = generateFibonacci(limit);
+
+            fibonacciSeries.forEach(function(number) {
+                var numberElement = document.createElement('span');
+                numberElement.textContent = number;
+                numberElement.classList.add('fibonacci-number');
+                fibonacciSeriesElement.appendChild(numberElement);
+            });
+        }
+
+        function generateFibonacci(n) {
+            var fibonacciSeries = [];
+            if (n === 1) {
+                fibonacciSeries = [0];
+            } else if (n === 2) {
+                fibonacciSeries = [0, 1];
+            } else {
+                fibonacciSeries = [0, 1];
+                for (var i = 2; i < n; i++) {
+                    fibonacciSeries[i] = fibonacciSeries[i - 1] + fibonacciSeries[i - 2];
+                }
+            }
+            return fibonacciSeries;
+        }
+    </script>
+</body>
+
+</html>

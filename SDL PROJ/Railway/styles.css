@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.timetable th {
+    background-color: #f2f2f2;
+}
+
+.timetable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.timetable tr:hover {
+    background-color: #f2f2f2;
+}
